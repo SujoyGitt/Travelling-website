@@ -1,0 +1,528 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Shizuru&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+}
+.main video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.main .nav {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(90, 90, 90, 0.527), transparent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: 0.5s;
+  backdrop-filter: blur(3px);
+}
+.main .navadd {
+  background-color: rgba(1, 126, 126, 0.548);
+  backdrop-filter: blur(4px);
+}
+.main .nav .logo {
+  width: 15%;
+  text-align: center;
+}
+.main .nav .logo h1 {
+  font-family: "Courgette", cursive;
+  color: whitesmoke;
+  font-size: 2em;
+}
+.main .nav .logo span {
+  text-transform: capitalize;
+  font-family: monospace;
+  font-style: oblique;
+  font-size: 20px;
+  color: rgb(46, 253, 233);
+}
+.main .nav .menuber {
+  margin-bottom: 10px;
+  display: none;
+}
+.main .nav .menuber div {
+  width: 25px;
+  height: 3px;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-top: 7px;
+  transition: 0.3s;
+}
+.main .nav .menuber .oneadd {
+  transform: rotate(45deg) translateY(15px);
+}
+.main .nav .menuber .twoadd {
+  opacity: 0;
+}
+.main .nav .menuber .threeadd {
+  transform: rotate(-45deg) translateY(-15px);
+}
+.main .nav .menuber div:nth-child(1) {
+  margin-top: 13px;
+}
+.main .nav .menu .search {
+  height: 35px;
+  width: 250px;
+  border-radius: 150px;
+  transform: translatey(-8px);
+  margin-top: 15px;
+}
+.main .nav .menu .search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 150px;
+  z-index: -1;
+  padding-left: 10px;
+}
+.main .nav .menu .search label {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.main .nav .menu {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 5px;
+}
+.main .nav .menu li {
+  list-style: none;
+  display: inline-block;
+  /* font-size: 15px; */
+}
+.main .nav .menu li i {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+.main .nav .menu li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 15px;
+  color: rgb(247, 247, 247);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline;
+}
+.main .nav .menu li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: whitesmoke;
+  bottom: 0px;
+  border-radius: 5px;
+  left: 0;
+  transition: 0.5s;
+}
+.main .nav .menu li a:hover::after {
+  width: 100%;
+}
+.main .banner {
+  width: 320px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+}
+.main .banner h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(0, 255, 242);
+  text-shadow: 0px 0px 1px black;
+  font-family: "Shizuru", cursive;
+}
+.main .banner span {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+  color: rgb(255, 255, 255);
+}
+.main .banner a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(to right, rgb(0, 107, 107), rgb(0, 255, 255));
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  margin: 15px 0px;
+}
+.main .banner p {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-shadow: 0px 0px 0.5px white;
+}
+.section2 {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  overflow: hidden;
+}
+.section2 h1 {
+  text-transform: uppercase;
+  color: teal;
+}
+.section2 > p {
+  width: 380px;
+  margin: 5px auto;
+  margin-bottom: 30px;
+}
+.section2 .card {
+  width: 80%;
+  min-height: 400px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.section2 .card div {
+  width: 320px;
+  height: 400px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.section2 .card .cardone {
+  border-radius: 10px;
+  transform: translateX(-500px);
+  transition: 1s;
+  opacity: 0;
+}
+.section2 .card .cardtwo {
+  transform: translateY(-500px);
+  transition: 1s;
+  opacity: 0;
+}
+.section2 .card .cardthree {
+  transform: translateX(500px);
+  transition: 1s;
+  opacity: 0;
+}
+.section2 .card .cardoneAdd {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.section2 .card .cardTwoAdd {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.section2 .card .cardThreeAdd {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.section2 .card div video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.section2 .card div .cardonecontent {
+  width: 100%;
+  height: 30%;
+  top: 70%;
+  text-align: left;
+  padding: 30px 10px;
+  background: teal;
+  color: rgb(223, 223, 223);
+}
+.section2 .card div .cardonecontent h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.section2 .card div .cardonecontent p {
+  padding: 10px 0px;
+}
+.section2 > a {
+  text-decoration: none;
+  padding: 10px 25px;
+  background: teal;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 15px;
+  margin: 20px 0px;
+  display: inline-block;
+}
+.section3 {
+  width: 100%;
+  min-height: 400px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.section3 div {
+  width: 50%;
+  height: 350px;
+  min-height: 100%;
+}
+.section3 .disone {
+  transform: translateX(-400px);
+  opacity: 0;
+  transition: 1.5s;
+  position: relative;
+}
+.section3 .disone video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section3 .disOneAdd {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.section3 .distwo {
+  transform: translateX(400px);
+  opacity: 0;
+  transition: 1.5s;
+}
+.section3 .disTwoAdd {
+  transform: translateX(0px);
+  opacity: 1;
+  z-index: 5;
+}
+.section3 div:nth-child(2) {
+  background: rgb(0, 177, 177);
+  padding: 10px 0px;
+  text-transform: capitalize;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+.section3 .distwo p {
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 50px;
+  color: whitesmoke;
+}
+.section3 .distwo span {
+  font-size: 15px;
+  text-transform: capitalize;
+  color: whitesmoke;
+  display: block;
+  margin: 40px 50px;
+}
+.section4 {
+  width: 80%;
+  min-height: 250px;
+  top: 0px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+}
+.section4 h4 {
+  text-align: center;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.section4 .our-services {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+.section4 .ourserviceAdd {
+  opacity: 1;
+}
+.section4 .our-services div {
+  min-width: 250px;
+  height: 180px;
+  box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.637),
+    inset 0px 0px 3px rgba(128, 128, 128, 0.637);
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(0, 158, 158);
+  color: whitesmoke;
+  position: relative;
+}
+.section4 .our-services div h5 {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin: 5px 0px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.section4 .our-services div p {
+  font-size: 14px;
+  margin-left: 35px;
+}
+.section4 .our-services div i {
+  position: absolute;
+  width: 10%;
+  height: 50%;
+  top: 17%;
+  left: 6%;
+  font-size: 20px;
+}
+.section4 .left-button {
+  font-size: 4em;
+  font-family: sans-serif;
+  position: absolute;
+  top: 45%;
+  left: -8%;
+  z-index: 5;
+}
+.section4 .right-button {
+  font-size: 4em;
+  font-family: sans-serif;
+  position: absolute;
+  top: 45%;
+  right: -8%;
+}
+footer {
+  width: 95%;
+  min-height: 500px;
+  background-color: rgb(0, 30, 32);
+  margin: 30px auto;
+  margin-top: 50px;
+  position: relative;
+  overflow-x: hidden;
+}
+footer .footer-parent {
+  width: 100%;
+  top: 15%;
+  min-height: 300px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+  overflow: hidden;
+}
+footer .footer-parent div {
+  padding: 10px 0px;
+}
+footer .footer-parent .footerChildOne {
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: 0.8s;
+}
+footer .footer-parent .footerChildOneAdd {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+footer .footer-parent .footerChildOne p {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  color: whitesmoke;
+  font-size: 18px;
+  margin-left: 10px;
+}
+footer .footer-parent .footerChildOne li {
+  display: inline-block;
+}
+footer .footer-parent .footerChildOne li a {
+  margin-left: 10px;
+}
+footer .footer-parent div ul {
+  margin-top: 15px;
+}
+footer .footer-parent div li {
+  list-style: none;
+}
+footer .footer-parent div li a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 6px 0px;
+  display: inline-block;
+  font-size: 15px;
+}
+footer .footer-parent div p {
+  color: rgb(163, 163, 163);
+}
+footer .footer-parent .footerChildFour {
+  transform: translateX(400px);
+  opacity: 0;
+  transition: 1s;
+}
+footer .footer-parent .footerChildFourAdd {
+  transform: translateX(0);
+  opacity: 1;
+}
+footer .footer-parent .footerChildFour p {
+  color: whitesmoke;
+  font-size: 14px;
+  font-weight: 250;
+  word-wrap: break-word;
+}
+footer .footer-parent div p i {
+  padding-right: 15px;
+}
+footer .footer-parent .footerChildFour form {
+  margin-top: 60px;
+  position: relative;
+}
+footer .footer-parent .footerChildFour input {
+  width: 290px;
+  padding: 5px;
+  font-style: 15px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 0.3px solid rgb(105, 105, 105);
+  color: whitesmoke;
+}
+footer .footer-parent .footerChildFour label {
+  position: absolute;
+  color: rgb(126, 126, 126);
+  left: 0;
+  top: 0px;
+  transition: 0.5s;
+}
+footer .footer-parent .footerChildFour input:focus ~ label {
+  top: -20px;
+}
+footer .footer-parent .footerChildFour input:valid ~ label {
+  top: -20px;
+}
+footer .footer-parent .footerChildFour button {
+  padding: 7px 25px;
+  color: whitesmoke;
+  background-color: rgb(201, 61, 37);
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  margin-top: 15px;
+}

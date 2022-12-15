@@ -1,0 +1,37 @@
+@media (max-width:992px) {
+    .main .nav .logo h1 {
+        font-family: "Courgette", cursive;
+        color: whitesmoke;
+        font-size: 1.5em;
+      }
+      .main .nav .logo span {
+        text-transform: capitalize;
+        font-family: monospace;
+        font-style: oblique;
+        font-size: 18px;
+        color: rgb(46, 253, 233);
+      }
+    .main .nav .menu {
+        width: 85%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 5px;
+      }
+      .main .nav .menu .search {
+        height: 35px;
+        width: 200px;
+        border-radius: 150px;
+        transform: translatey(-8px);
+        margin-top: 15px;
+      }
+      .section2 .card {
+        width: 80%;
+        min-height: 400px;
+        margin: 0px auto;
+        display: flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+}
